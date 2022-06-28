@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  brs:
+    build: .
+    command: sh -c "bundle exec rails db:migrate && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    volumes:
+      - .:/brs
+    ports:
+      - "3000:3000"
