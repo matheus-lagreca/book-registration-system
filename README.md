@@ -12,7 +12,7 @@ Docker: https://docs.docker.com/samples/rails/
 
 ## RailsGuides
 Action Cable: https://guides.rubyonrails.org/action_cable_overview.html
-Working with Js: https://guides.rubyonrails.org/working_with_javascript_in_rails.html
+Working with Js: https://guides.rubyonrails.org/working_with_javascript_in_rails.html  
 Scaffolding: https://guides.rubyonrails.org/v3.2/getting_started.html
 
 ## Github
