@@ -30,6 +30,9 @@ gem 'jbuilder'
 # Kaminari
 gem 'kaminari'
 
+# RequestJS
+gem 'requestjs-rails'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
