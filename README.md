@@ -12,8 +12,10 @@ Docker: https://docs.docker.com/samples/rails/
 
 ## RailsGuides
 Action Cable: https://guides.rubyonrails.org/action_cable_overview.html
-Working with Js: https://guides.rubyonrails.org/working_with_javascript_in_rails.html  
-Scaffolding: https://guides.rubyonrails.org/v3.2/getting_started.html
+Working with Js: https://guides.rubyonrails.org/working_with_javascript_in_rails.htmlScaffolding: https://guides.rubyonrails.org/v3.2/getting_started.html  
+Associations: https://guides.rubyonrails.org/association_basics.html  
+Layouts & rendering: https://guides.rubyonrails.org/layouts_and_rendering.html
+
 
 ## Github
 rack-mini-profile: https://github.com/MiniProfiler/rack-mini-profiler
