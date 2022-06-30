@@ -1,9 +1,5 @@
 <div id="<%= dom_id book %>">
-
-    
    <div class="single-book">
- 
-
       <% if book.cover %>
        <%= image_tag book.cover, alt:"/images/testImgL.jpg", class: "card-img-left" %>
      <% else %>
@@ -11,28 +7,27 @@
       <% end %>
  
        <div class="card-body">
-          <h5 class="card-title">
+          <h5 class="book-title">
             <%= book.title %>
           </h5>
-          <p class="card-text">
+          <p class="book-author">
             <%= book.author_name %>
           </p>
       </div>
-
-       <td><%= link_to 'Show', book %></td>
-       <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-
-
-
-
-
       <div class="card-footer">
         <small class="text-muted">
           <%= book.first_publish_year %> 
         </small>
       </div>
   
-  
+      <div>
+        <td><%= link_to 'Show', book %></td>
+       <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+ 
+      </div>
+
+
+       
    
    </div>
 
