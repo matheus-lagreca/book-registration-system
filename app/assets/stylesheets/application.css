@@ -86,3 +86,7 @@
   justify-content: center;
 }
 
+.pages {
+  display:flex;
+  justify-content: center;
+}
