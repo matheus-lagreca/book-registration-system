@@ -2,13 +2,15 @@
 
 <h1>Books</h1>
 
-<div id="books">
-  <% @books.each do |book| %>
-    <%= render book %>
-    <p>
-      <%= link_to "Show this book", book %>
-    </p>
-  <% end %>
+
+
+
+<div class="book-list-container gap-3">
+    <% @books.each do |book| %>
+      <%= render book %>
+    <% end %>
 </div>
 
-<%= link_to "New book", new_book_path %>
+<div>
+ <%= link_to "New book", new_book_path %>
+</div>

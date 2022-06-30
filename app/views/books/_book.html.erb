@@ -1,22 +1,39 @@
 <div id="<%= dom_id book %>">
-  <p>
-    <strong>Title:</strong>
-    <%= book.title %>
-  </p>
 
-  <p>
-    <strong>Author name:</strong>
-    <%= book.author_name %>
-  </p>
+    
+   <div class="single-book">
+ 
 
-  <p>
-    <strong>First publish year:</strong>
-    <%= book.first_publish_year %>
-  </p>
+      <% if book.cover %>
+       <%= image_tag book.cover, alt:"/images/testImgL.jpg", class: "card-img-left" %>
+     <% else %>
+       <%= image_tag "testImgL.jpg", class: "img-fluido me-3 rounded float-left book-image" %>
+      <% end %>
+ 
+       <div class="card-body">
+          <h5 class="card-title">
+            <%= book.title %>
+          </h5>
+          <p class="card-text">
+            <%= book.author_name %>
+          </p>
+      </div>
 
-  <p>
-    <strong>Cover:</strong>
-    <%= book.cover %>
-  </p>
+       <td><%= link_to 'Show', book %></td>
+       <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+
+
+
+
+      <div class="card-footer">
+        <small class="text-muted">
+          <%= book.first_publish_year %> 
+        </small>
+      </div>
+  
+  
+   
+   </div>
 
 </div>
