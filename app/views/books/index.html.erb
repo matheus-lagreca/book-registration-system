@@ -2,7 +2,17 @@
 
 <h1>Books</h1>
 
+<div class ="search-box">
 
+   <%# make a real form later %>
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2">
+  </div>
+
+
+
+  <%= link_to "New book", new_book_path, class: "btn btn-primary" %>
+</div>
 
 
 <div class="book-list-container gap-3">
@@ -11,6 +21,4 @@
     <% end %>
 </div>
 
-<div>
- <%= link_to "New book", new_book_path %>
-</div>
+

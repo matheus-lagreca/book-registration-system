@@ -63,6 +63,10 @@
   flex-wrap: wrap;
 }
 
+.book-body {
+
+}
+
 .book-title {
   max-width: 200px;
   word-wrap: break-word; 
@@ -72,3 +76,13 @@
   max-width: 200px;
   word-wrap: break-word; 
 }
+
+.book-year {
+
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+}
+

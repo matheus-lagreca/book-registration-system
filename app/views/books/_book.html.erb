@@ -5,23 +5,21 @@
      <% else %>
        <%= image_tag "testImgL.jpg", class: "img-fluido me-3 rounded float-left book-image" %>
       <% end %>
- 
-       <div class="card-body">
+
+      <div class="book-body"> 
           <h5 class="book-title">
             <%= book.title %>
           </h5>
           <p class="book-author">
             <%= book.author_name %>
           </p>
+          <small class="book-year">
+            <%= book.first_publish_year %> 
+          </small>
       </div>
-      <div class="card-footer">
-        <small class="text-muted">
-          <%= book.first_publish_year %> 
-        </small>
-      </div>
-  
+      
       <div>
-        <td><%= link_to 'Show', book %></td>
+        <td><%= link_to "Edit this book", edit_book_path(book) %> </td> 
        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
  
       </div>
