@@ -48,16 +48,27 @@
 .single-book {
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 
 .book-image {
-  width: 300px;
-  height: 400px;
+  width: 200px !important;
+  height: 300px !important;
 }
 
 .book-list-container {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
+.book-title {
+  max-width: 200px;
+  word-wrap: break-word; 
+}
+
+.book-author {
+  max-width: 200px;
+  word-wrap: break-word; 
+}
