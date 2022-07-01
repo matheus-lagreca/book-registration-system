@@ -12,10 +12,10 @@
 
 ActiveRecord::Schema[7.0].define(version: 2022_06_30_003922) do
   create_table "books", force: :cascade do |t|
-    t.string "title"
+    t.string "title", null: false
     t.string "author_name"
     t.integer "first_publish_year"
-    t.integer "cover"
+    t.string "cover_edition_key"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id", null: false
