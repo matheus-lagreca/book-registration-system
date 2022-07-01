@@ -4,32 +4,8 @@ import { api, coverApi } from "../services/api.js"
 
 const API_URL = "http://openlibrary.org/search"
 
-//   <div data-controller="books" data-books-numberBooks-value=0>
-//     <h1 data-books-container-value="<%= %>"> </h1>
-
-//    <h1 data-books-target='output'></h1>
-//     <button data-action='books#click'>clickme</button>
-//       <button data-action='books#fetch'>fetch</button>
-//     
-//  </div> 
-// </div> 
-
-// <br><br>
-
-//   <div data-controller="">
-//      
-//   </div>
-
-
-
-// <br><br>
-
-// <div data-controller="text-input">
-//   <input type="text" data-action="text-input#changed" data-text-input-target="input">
-//   <h1 data-text-input-target='output'></h1>
-
 export default class extends Controller {
-  static targets = ["title"]
+  static targets = ["output"]
   static values = { url: String, numberBooks: Number, container: Array, number: Number }
 
   // public
@@ -53,10 +29,6 @@ export default class extends Controller {
       })
 
 
-  }
-
-  get title() {
-    return this.titleTarget
   }
 
   containerValueChanged() {

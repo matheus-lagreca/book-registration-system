@@ -18,5 +18,6 @@ export default class extends Controller {
 
   changed() {
     this.outputTarget.textContent = this.inputTarget.value
+    console.log(this.outputTarget)
   }
 }
