@@ -23,18 +23,18 @@ class BooksController < ApplicationController
   def create
     @book = Current.user.books.create(book_params)
 
-    respond_to do |format|
-      if @book.save
-        format.html { redirect_to book_url(@book), notice: 'Book was successfully created.' }
-        format.json { render :show, status: :created, location: @book }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @book.errors, status: :unprocessable_entity }
-      end
+    # Action Cable
+    if @book.save
+      ActionCable.server.broadcast 'books_channel', { book: @book }
+      redirect_to books_path, notice: 'Book was successfully registered'
+    else
+      flash[:alert] = 'Something happened while trying to register a Book, try again.'
+      render :new
     end
   end
 
   # PATCH/PUT /books/1 or /books/1.json
+  # Make it so that only the user that registered the book can patch it
   def update
     respond_to do |format|
       if @book.update(book_params)
@@ -48,6 +48,7 @@ class BooksController < ApplicationController
   end
 
   # DELETE /books/1 or /books/1.json
+  # Make it so that only the user that registered the book can delete it
   def destroy
     @book.destroy
 
