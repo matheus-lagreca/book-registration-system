@@ -1,7 +1,7 @@
 <div id="<%= dom_id book %>">
    <div class="single-book">
-      <% if book.cover %>
-       <%= image_tag book.cover, alt:"/images/testImgL.jpg", class: "card-img-left" %>
+      <% if book.cover_edition_key %>
+       <%= image_tag book.cover_edition_key, alt:"/images/testImgL.jpg", class: "card-img-left" %>
      <% else %>
        <%= image_tag "testImgL.jpg", class: "img-fluido me-3 rounded float-left book-image" %>
       <% end %>
