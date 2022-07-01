@@ -4,7 +4,7 @@ class CreateBooks < ActiveRecord::Migration[7.0]
       t.string :title, null: false
       t.string :author_name
       t.integer :first_publish_year
-      t.integer :cover
+      t.string :cover_edition_key
 
       t.timestamps
     end
