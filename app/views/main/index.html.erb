@@ -1,21 +1,12 @@
-<div class="Search-box">
-  <h1>Main page</h1>
 
-  <br><br>
+   <div class="book-list-container gap-3 mt-4"> 
+       <% @books.each do |book| %> 
+         <%= render book %> 
+       <% end %> 
+   </div> 
 
-    <div data-controller='books'>
-      <input type="text" data-action='books#search' data-books-target="input">
-      <%# add a drop down here that searches the api and creates a list of books based on the outputValue %>
-    </div>
-
-
-     
-      <ul>
-        <li></li>
-        <li></li>
-      </ul>
-
-  <br><br>
-
-
+<div class="pages"> 
+   <div class="mt-4 pages"> 
+     <%= paginate @books %> 
+   </div> 
 </div>
