@@ -12,3 +12,4 @@ pin 'buffer', to: 'https://ga.jspm.io/npm:@jspm/core@2.0.0-beta.24/nodelibs/brow
 pin "@rails/request.js", to: "https://ga.jspm.io/npm:@rails/request.js@0.0.6/src/index.js"
 pin "@rails/actioncable", to: "actioncable.esm.js"
 pin_all_from "app/javascript/channels", under: "channels"
+pin "jquery", to: "https://ga.jspm.io/npm:jquery@3.6.0/dist/jquery.js"
