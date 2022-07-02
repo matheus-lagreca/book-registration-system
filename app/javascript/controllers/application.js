@@ -1,5 +1,7 @@
 import { Application } from "@hotwired/stimulus"
 import jquery from "jquery"
+import "ajax"
+import "../controllers/bookAPI"
 
 const application = Application.start()
 
