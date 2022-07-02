@@ -13,3 +13,5 @@ pin "@rails/request.js", to: "https://ga.jspm.io/npm:@rails/request.js@0.0.6/src
 pin "@rails/actioncable", to: "actioncable.esm.js"
 pin_all_from "app/javascript/channels", under: "channels"
 pin "jquery", to: "https://ga.jspm.io/npm:jquery@3.6.0/dist/jquery.js"
+pin "ajax", to: "https://ga.jspm.io/npm:ajax@0.0.4/lib/ajax.js"
+pin "underscore", to: "https://ga.jspm.io/npm:underscore@1.13.4/underscore-umd-min.js"
