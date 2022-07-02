@@ -9,6 +9,7 @@ To run the project use docker-compose up
 
 # docs
 Docker: https://docs.docker.com/samples/rails/
+https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded
 
 ## RailsGuides
 Action Cable: https://guides.rubyonrails.org/action_cable_overview.html
