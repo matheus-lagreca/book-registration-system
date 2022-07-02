@@ -2,6 +2,35 @@
 
 To run the project use docker-compose up
 
+## User
+- [X] Sign-up
+- [X] Sign-in
+- [X] Authentication
+- [ ] Email Text Validation  
+
+## Books
+- [x] Search books on api
+- [x] Register a book from api search
+- [x] Show book covers
+- [ ] Save book covers
+- [ ] Edit a book only if registered by the same user
+- [ ] Delete a book only if registered by the same user
+
+## Sockets
+- [ ] Update page when a new book is registered
+- [ ] Update page when a book is edited
+- [ ] Update page when a book is delete
+
+## Pagination
+- [X] Use pagination with Kaminari
+
+## Customization
+- [ ] Dark mode
+- [ ] Custom Color palette
+
+## Tests
+- [ ] Unit Tests
+
 # dependencies
 
 * Ruby version 7.0.1
