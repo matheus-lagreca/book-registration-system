@@ -27,13 +27,12 @@ To run the project use docker-compose up
 ## Customization/fine tuning
 - [ ] Dark mode
 - [ ] Custom Color palette
-- [ ] Make all possible renders as partials
 
 ## Tests
 - [ ] Unit Tests
 
 ## ~~Features~~ Bugs
-* Can't select the correct book  
+* ~~Can't select the correct book~~  
 * When a book is added, if a user is in page X, that book will be added to that page  
 
 
