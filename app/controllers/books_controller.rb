@@ -25,7 +25,8 @@ class BooksController < ApplicationController
 
     # Action Cable
     if @book.save
-      ActionCable.server.broadcast 'books_channel', { book: @book }
+      data = ApplicationController.render partial: 'books/single_book', locals: { book: @book }
+      ActionCable.server.broadcast 'books_channel', data
       redirect_to books_path, notice: 'Book was successfully registered'
     else
       flash[:alert] = 'Something happened while trying to register a Book, try again.'
