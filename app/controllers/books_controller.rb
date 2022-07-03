@@ -39,7 +39,7 @@ class BooksController < ApplicationController
   def update
     respond_to do |format|
       if @book.update(book_params)
-        format.html { redirect_to book_url(@book), notice: 'Book was successfully updated.' }
+        format.html { redirect_to root_path, notice: 'Book was successfully updated.' }
         format.json { render :show, status: :ok, location: @book }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -51,11 +51,17 @@ class BooksController < ApplicationController
   # DELETE /books/1 or /books/1.json
   # Make it so that only the user that registered the book can delete it
   def destroy
-    @book.destroy
+    if Current.user.id == @book.user_id
 
-    respond_to do |format|
-      format.html { redirect_to books_url, notice: 'Book was successfully destroyed.' }
-      format.json { head :no_content }
+      @book.destroy
+
+      respond_to do |format|
+        format.html { redirect_to books_url, notice: 'Book was successfully destroyed.' }
+        format.json { head :no_content }
+      end
+    else
+      flash[:alert] = 'You are not allowed to delete this book.'
+      redirect_to root_path
     end
   end
 
