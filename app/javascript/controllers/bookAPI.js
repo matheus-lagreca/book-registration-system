@@ -15,7 +15,7 @@ window.addEventListener('turbo:load', () => {
 
         $('<button/>').addClass('dropdown-item').attr('type', 'button').text("Loading...").appendTo('#search-list');
 
-        let url = `http://openlibrary.org/search.json?q=${event.target.value}&fields=author_name,first_publish_year,title,cover_edition_key&limit=10`;
+        let url = `http://openlibrary.org/search.json?q=${event.target.value}&fields=author_name,first_publish_year,title,cover_edition_key&limit=5`;
         $.getJSON(url, (response) => {
 
           const searchResults = response.docs
@@ -43,7 +43,11 @@ window.addEventListener('turbo:load', () => {
             $(`<small class="book-first-publish-year">${searchResults[i].first_publish_year}</>`).appendTo(body)
 
             const bottom = $('<div class="book-register"/>').appendTo(div)
-            $(`<button id="btnSubmit" class="btn btn-primary rounded-pill m-1" onclick=${selectBook(searchResults[i])}> Register Book </>`).appendTo(bottom)
+            const button = $('<button id="btnSubmit">Select Book</>')
+            button.addClass('btn btn-primary rounded-pill m-1').attr('type', 'button')
+              .on('click', () => selectBook(searchResults[i])).appendTo(bottom)
+
+            //$(`<button id="btnSubmit" class="btn btn-primary rounded-pill m-1" onclick=${selectBook(searchResults[i])}> Register Book </>`).appendTo(bottom)
 
           });
         });
