@@ -17,8 +17,7 @@ consumer.subscriptions.create("BooksChannel", {
 
     // change this to render partial
 
-    const item = $('<li class="li"/>')
-    const div = $('<div class="single-book"/>').appendTo(item)
+    const div = $('<div class="single-book"/>')
     const body = $('<div class="book-body"/>').appendTo(div)
 
     // cover
@@ -39,9 +38,10 @@ consumer.subscriptions.create("BooksChannel", {
 
     // prepend to book list in main
     const allBooks = $("#all-books")
-    allBooks.prepend(item)
-
-
-
+    allBooks.prepend(div)
+    // Remove last child from list if over the cap
+    if (allBooks[0].children.length > 10) {
+      $("#all-books").children().last().remove()
+    }
   }
 });
