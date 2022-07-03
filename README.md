@@ -6,15 +6,15 @@ To run the project use docker-compose up
 - [X] Sign-up
 - [X] Sign-in
 - [X] Authentication
-- [ ] Email Text Validation  
+- [X] Email Text Validation  
 
 ## Books
 - [x] Search books on api
 - [x] Register a book from api search
 - [x] Show book covers while searching on api
 - [ ] Save book covers
-- [ ] Edit a book only if registered by the same user
-- [ ] Delete a book only if registered by the same user
+- [X] Edit a book only if registered by the same user
+- [X] Delete a book only if registered by the same user
 
 ## Sockets
 - [x] Update page when a new book is registered
