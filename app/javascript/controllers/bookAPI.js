@@ -26,28 +26,28 @@ window.addEventListener('turbo:load', () => {
 
           $.each(searchResults, (i) => {
             const item = $('<li class="li"/>').appendTo(list);
-            const div = $('<div class="single-book"/>').appendTo(item)
-            const body = $('<div class="book-body"/>').appendTo(div)
-            const bottom = $('<div class="book-register"/>').appendTo(div)
 
-            // cover
+            const div = $('<div class="single-book"/>').appendTo(item)
+
             $('<img>', {
-              id: 'cover_id',
+              id: 'imgId',
               src: `https://covers.openlibrary.org/b/olid/${searchResults[i].cover_edition_key}-M.jpg`,
               class: 'book-image',
               alt: '/images/textImgL.jpg'
             }).appendTo(div)
 
-            // Text
+            const body = $('<div class="book-body"/>').appendTo(div)
+
             $('<h5 class="book-title"/>').text(`${searchResults[i].title}`).appendTo(body)
             $(`<small class="book-author">${searchResults[i].author_name[0]}</>`).appendTo(body)
             $(`<small class="book-first-publish-year">${searchResults[i].first_publish_year}</>`).appendTo(body)
 
-            // Button
+            const bottom = $('<div class="book-register"/>').appendTo(div)
             $(`<button id="btnSubmit" class="btn btn-primary rounded-pill m-1" onclick=${selectBook(searchResults[i])}> Register Book </>`).appendTo(bottom)
 
           });
         });
+
       }, 500);
     });
   }
