@@ -1,4 +1,3 @@
-<div id="<%= dom_id book %>">
    <div class="single-book">
       <% if @book.cover_edition_key %>
        <%= image_tag @book.cover_edition_key, alt:"/images/testImgL.jpg", class: "card-img-left img-fluid me-3 rounded float-left book-image" %>
@@ -8,25 +7,20 @@
 
       <div class="book-body"> 
           <h5 class="book-title">
-            <%= book.title %>
+            <%= @book.title %>
           </h5>
           <p class="book-author">
-            <%= book.author_name %>
+            <%= @book.author_name %>
           </p>
           <small class="book-year">
-            <%= book.first_publish_year %> 
+            <%= @book.first_publish_year %> 
           </small>
       </div>
       
       <div>
-        <td><%= link_to "Edit this book", edit_book_path(book) %> </td> 
-       <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
- 
+        <td><%= link_to "Edit this book", edit_book_path(@book) %> </td> 
+
+       <%= button_to 'Destroy', @book, method: :delete %>
       </div>
-
-
-       
-   
    </div>
 
-</div>

@@ -25,10 +25,13 @@ window.addEventListener('turbo:load', () => {
 
 
           $.each(searchResults, (i) => {
-            const item = $('<li class="li"/>').appendTo(list);
 
-            const div = $('<div class="single-book"/>').appendTo(item)
+            const div = $('<div class="single-book"/>').appendTo(list)
+            const body = $('<div class="book-body"/>')
+            const bottom = $('<div class="book-register"/>')
+            const button = $('<button id="btnSubmit">Select Book</>')
 
+            // cover
             $('<img>', {
               id: 'imgId',
               src: `https://covers.openlibrary.org/b/olid/${searchResults[i].cover_edition_key}-M.jpg`,
@@ -36,14 +39,15 @@ window.addEventListener('turbo:load', () => {
               alt: '/images/textImgL.jpg'
             }).appendTo(div)
 
-            const body = $('<div class="book-body"/>').appendTo(div)
-
+            // body
+            body.appendTo(div)
             $('<h5 class="book-title"/>').text(`${searchResults[i].title}`).appendTo(body)
             $(`<small class="book-author">${searchResults[i].author_name[0]}</>`).appendTo(body)
             $(`<small class="book-first-publish-year">${searchResults[i].first_publish_year}</>`).appendTo(body)
 
-            const bottom = $('<div class="book-register"/>').appendTo(div)
-            const button = $('<button id="btnSubmit">Select Book</>')
+
+            // button
+            bottom.appendTo(div)
             button.addClass('btn btn-primary rounded-pill m-1').attr('type', 'button')
               .on('click', () => selectBook(searchResults[i])).appendTo(bottom)
 
@@ -60,6 +64,6 @@ window.addEventListener('turbo:load', () => {
     $('#book_title').val(book.title)
     $('#book_author_name').val(book.author_name[0])
     $('#book_first_publish_year').val(book.first_publish_year)
-    $('#book_cover_edition_key').val(book.cover_edition_key)
+    $('#book_cover_edition_key').val(`https://covers.openlibrary.org/b/olid/${searchResults[i].cover_edition_key}-M.jpg`)
   }
 })
