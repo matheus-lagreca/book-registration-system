@@ -22,13 +22,14 @@
             <%= form.label :first_publish_year , style: "display: block" %>
             <%= form.number_field :first_publish_year %>
           </div>
+            <%= form.text_field :cover_edition_key, type: "hidden" %>
         </div>
        
 
       </div>
 
     <div>
-      <ul id="search-list", class="book-list-container gap-3" aria-labelledby="search"></ul>
+      <div id="search-list", class="book-list-container gap-3" aria-labelledby="search"></div>
     </div>
 
 
