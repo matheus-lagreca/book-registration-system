@@ -18,17 +18,11 @@ consumer.subscriptions.create("BooksChannel", {
     // change this to render partial
 
     const div = $('<div class="single-book"/>')
-    const body = $('<div class="book-body"/>').appendTo(div)
-
     // cover
-    $('<img>', {
-      id: 'cover_edition_key_id',
-      src: `https://covers.openlibrary.org/b/olid/${data.book.cover_edition_key}-M.jpg`,
-      class: 'book-image',
-      alt: '/images/textImg.jpg'
-    }).appendTo(div)
+    $('<img src="testImgL.jpg" class="img-fluid me-3 rounded float-left book-image">').appendTo(div)
 
     // Text
+    const body = $('<div class="book-body"/>').appendTo(div)
     $('<h5 class="book-title"/>').text(`${data.book.title}`).appendTo(body)
     $(`<small class="book-author">${data.book.author_name[0]}</>`).appendTo(body)
     $(`<small class="book-first-publish-year">${data.book.first_publish_year}</>`).appendTo(body)
