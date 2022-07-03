@@ -1,11 +1,14 @@
 
 <div id="books-page" class="form-outline mt-4">
    <%= form_with model: @book, url: books_path do |form| %>
-    <div class="">
+    <div class="add-book-page-outter-div">
       <%= form.text_field :search, class: "search-box form-control m-3", placeholder:"Search books", href: "#", id: "search-bar", role: "button", "data-bs-toggle": "dropdown", "aria-expanded": "false", autocomplete: "off" %>
-       <ul id="search-list", class="book-list-container gap-3" aria-labelledby="search"></ul>
-        </div>
-          <div class="field">
+
+      <%= form.submit class:"btn btn-primary"%>
+
+      <div>
+        
+         <div class="field">
             <%= form.label :title, style: "display: block" %>
             <%= form.text_field :title %>
           </div>
@@ -19,11 +22,15 @@
             <%= form.label :first_publish_year , style: "display: block" %>
             <%= form.number_field :first_publish_year %>
           </div>
-
-          <div>
-            <%= form.submit %>
-          </div>
         </div>
-    <% end %>
+       
+
+      </div>
+
+    <div>
+      <ul id="search-list", class="book-list-container gap-3" aria-labelledby="search"></ul>
+    </div>
 
 
+   <% end %>
+</div>
