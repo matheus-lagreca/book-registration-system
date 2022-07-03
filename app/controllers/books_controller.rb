@@ -37,14 +37,19 @@ class BooksController < ApplicationController
   # PATCH/PUT /books/1 or /books/1.json
   # Make it so that only the user that registered the book can patch it
   def update
-    respond_to do |format|
-      if @book.update(book_params)
-        format.html { redirect_to root_path, notice: 'Book was successfully updated.' }
-        format.json { render :show, status: :ok, location: @book }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @book.errors, status: :unprocessable_entity }
+    if Current.user.id == @book.user_id
+      respond_to do |format|
+        if @book.update(book_params)
+          format.html { redirect_to root_path, notice: 'Book was successfully updated.' }
+          format.json { render :show, status: :ok, location: @book }
+        else
+          format.html { render :edit, status: :unprocessable_entity }
+          format.json { render json: @book.errors, status: :unprocessable_entity }
+        end
       end
+    else
+      flash[:alert] = 'You are not allowed to edit this book.'
+      redirect_to root_path
     end
   end
 
