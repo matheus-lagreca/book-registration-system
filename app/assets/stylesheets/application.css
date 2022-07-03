@@ -75,7 +75,7 @@
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: flex-end;
+  align-items: baseline;
 }
 
 .single-book:hover .image {
@@ -87,21 +87,33 @@
 }
 
 .book-body {
-
+  display: flex;
+  flex-direction: column; 
 }
 
 .book-title {
   max-width: 200px;
+  max-height: 50px;
+  margin-top: 0.5rem;
   word-wrap: break-word; 
+  overflow: hidden;
+  text-overflow: ellipsis
 }
 
 .book-author {
   max-width: 200px;
+  max-height: 50px;
   word-wrap: break-word; 
+  overflow: hidden;
+  text-overflow: ellipsis
 }
 
 .book-year {
 
+}
+
+.book-register {
+  
 }
 
 .book-dropdown {
