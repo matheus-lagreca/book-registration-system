@@ -35,6 +35,34 @@ class UserControllerTest < ActionDispatch::IntegrationTest
   end
 
   # Sign up
+  test 'Should Sign up user' do
+    # find a way to not use password_digest here
+    assert_difference('User.count') do
+      post sign_up_url,
+           params: {
+             user: {
+               email: @user.email,
+               password: @user.password_digest,
+               password_confirmation: @user.password_digest
+             }
+           }
+    end
+  end
+
+  # test 'Should Not Sign up user' do
+  #   # find a way to not use password_digest here
+  #   # there is an error on this test
+  #   assert_no_difference('User.count') do
+  #     post sign_up_url,
+  #          params: {
+  #            user: {
+  #              email: @another_user.email,
+  #              password: @another_user.password_digest,
+  #              password_confirmation: @another_user.password_digest
+  #            }
+  #          }
+  #   end
+  # end
 
   # Sign In
 end

@@ -34,9 +34,9 @@ To run the project use docker-compose up
 
 ## Tests
 - [x] User Authentication
-- [ ] User Email Validation
-- [ ] User Sign-in
-- [ ] User Sign-up
+- [x] User Email Validation
+- [ ] User Sign-in 
+- [x] User Sign-up (incomplete)
 
 - [ ] Book Registration
 - [ ] Book Deletion
