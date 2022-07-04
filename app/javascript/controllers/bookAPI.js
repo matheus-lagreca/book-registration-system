@@ -61,7 +61,6 @@ window.addEventListener('turbo:load', () => {
   }
 
   function selectBook(book) {
-    console.log(book)
     $('#book_title').val(book.title)
     $('#book_author_name').val(book.author_name[0])
     $('#book_first_publish_year').val(book.first_publish_year)
