@@ -27,6 +27,7 @@ To run the project use docker-compose up
 - [X] Use pagination with Kaminari
 
 ## Customization/fine tuning
+- [ ] Add a main page for users that are not signed in
 - [ ] Dark mode
 - [ ] Custom Color palette  
 - [ ] Custom edit page  
