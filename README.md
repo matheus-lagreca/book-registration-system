@@ -33,11 +33,21 @@ To run the project use docker-compose up
 - [ ] Custom edit page  
 
 ## Tests
-- [ ] Unit Tests
+- [x] User Authentication
+- [ ] User Email Validation
+- [ ] User Sign-in
+- [ ] User Sign-up
+
+- [ ] Book Registration
+- [ ] Book Deletion
+- [ ] Book Update
+
+- [ ] User Cannot Delete Another User Book
+- [ ] User Cannot Update Another User Book
 
 ## ~~Features~~ Bugs
 * ~~Can't select the correct book~~  
-* When a book is added, if a user is in page X, that book will be added to that page  
+* When a book is added, if a user is in page X, that book will be added to that page  --> (check if user is in first page, push all books forward if user not in first page?)
 
 
 # What i tried to do
@@ -59,7 +69,7 @@ Working with Js: https://guides.rubyonrails.org/working_with_javascript_in_rails
 Scaffolding: https://guides.rubyonrails.org/v3.2/getting_started.html  
 Associations: https://guides.rubyonrails.org/association_basics.html  
 Layouts & rendering: https://guides.rubyonrails.org/layouts_and_rendering.html  
-
+Tests: https://guides.rubyonrails.org/testing.html  
 
 ## Github  
 rack-mini-profile: https://github.com/MiniProfiler/rack-mini-profiler  
