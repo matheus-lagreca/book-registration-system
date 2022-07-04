@@ -14,23 +14,6 @@ consumer.subscriptions.create("BooksChannel", {
     // Called when there's incoming data on the websocket for this channel
     console.log(data)
 
-    // change this to render partial
-
-    // const div = $('<div class="single-book"/>')
-    // // cover
-    // $('<img src="testImgL.jpg" class="img-fluid me-3 rounded float-left book-image">').appendTo(div)
-
-    // // Text
-    // const body = $('<div class="book-body"/>').appendTo(div)
-    // $('<h5 class="book-title"/>').text(`${data.book.title}`).appendTo(body)
-    // $(`<small class="book-author">${data.book.author_name[0]}</>`).appendTo(body)
-    // $(`<small class="book-first-publish-year">${data.book.first_publish_year}</>`).appendTo(body)
-
-    // buttons?
-
-
-
-    // prepend to book list in main
     const allBooks = $("#all-books")
     allBooks.prepend(data)
     //allBooks.prepend(div)
