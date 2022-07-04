@@ -12,9 +12,11 @@ To run the project use docker-compose up
 - [x] Search books on api
 - [x] Register a book from api search
 - [x] Show book covers while searching on api
-- [ ] Save book covers
+- [x] Save book covers
 - [X] Edit a book only if registered by the same user
 - [X] Delete a book only if registered by the same user
+- [ ] Add Multiple books
+- [ ] Show all books by user
 
 ## Sockets
 - [x] Update page when a new book is registered
@@ -26,7 +28,8 @@ To run the project use docker-compose up
 
 ## Customization/fine tuning
 - [ ] Dark mode
-- [ ] Custom Color palette
+- [ ] Custom Color palette  
+- [ ] Custom edit page  
 
 ## Tests
 - [ ] Unit Tests
