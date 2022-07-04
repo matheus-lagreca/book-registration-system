@@ -1,13 +1,17 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  id: 1
   title: MyString
   author_name: MyString
   first_publish_year: 1
-  cover: 1
+  cover_edition_key: MyString
+  user_id: 1
 
 two:
+  id: 2
   title: MyString
   author_name: MyString
   first_publish_year: 1
-  cover: 1
+  cover_edition_key: MyString
+  user_id: 1
