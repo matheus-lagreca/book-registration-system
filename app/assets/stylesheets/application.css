@@ -162,3 +162,11 @@
   flex-direction: column;
   align-items: center;
 }
+
+.my-navbar {
+  display: flex;
+  align-items: center
+}
+.user-email {
+  padding-right: 1rem;
+}
