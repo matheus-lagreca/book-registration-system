@@ -13,7 +13,7 @@ window.addEventListener('turbo:load', () => {
       clearTimeout(timeout)
       timeout = setTimeout(() => {
 
-        $('<button/>').addClass('dropdown-item').attr('type', 'button').text("Loading...").appendTo('#search-list');
+        $('<button/>').addClass('dropdown-item tc-l-grey').attr('type', 'button').text("Loading...").appendTo('#search-list');
 
         let url = `http://openlibrary.org/search.json?q=${event.target.value}&fields=author_name,first_publish_year,title,cover_edition_key&limit=5`;
         $.getJSON(url, (response) => {
@@ -41,18 +41,15 @@ window.addEventListener('turbo:load', () => {
 
             // body
             body.appendTo(div)
-            $('<h5 class="book-title"/>').text(`${searchResults[i].title}`).appendTo(body)
-            $(`<small class="book-author">${searchResults[i].author_name[0]}</>`).appendTo(body)
-            $(`<small class="book-first-publish-year">${searchResults[i].first_publish_year}</>`).appendTo(body)
+            $('<h5 class="book-title tc-l-grey"/>').text(`${searchResults[i].title}`).appendTo(body)
+            $(`<small class="book-author tc-l-grey">${searchResults[i].author_name[0]}</>`).appendTo(body)
+            $(`<small class="book-first-publish-year tc-l-grey">${searchResults[i].first_publish_year}</>`).appendTo(body)
 
 
             // button
             bottom.appendTo(div)
             button.addClass('btn btn-primary rounded-pill m-1').attr('type', 'button')
               .on('click', () => selectBook(searchResults[i])).appendTo(bottom)
-
-            //$(`<button id="btnSubmit" class="btn btn-primary rounded-pill m-1" onclick=${selectBook(searchResults[i])}> Register Book </>`).appendTo(bottom)
-
           });
         });
 

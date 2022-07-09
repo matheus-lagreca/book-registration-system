@@ -16,21 +16,40 @@
 
 
 
-
-/* body { */
-/*   background-color: #262626 !important; */
-/* } */
-
-.bg-gray-light {
-  background-color: #303030 !important;
+body {
+  background-color: #36393f !important;
 }
 
-.bg-gray-dark {
-  background-color: #121212 !important;
+.bg-l-grey {
+  background-color: #36393f !important;
 }
 
-.bg-gray-medium {
-  background-color: #1c1c1c !important;
+.bg-l2-grey {
+  background-color: #40444b !important;
+}
+
+.bg-d-grey {
+  background-color: #202225 !important;
+}
+
+.bg-lm-grey {
+  background-color: #292b2f !important;
+}
+
+.bg-m-grey {
+  background-color: #2f3136 !important;
+}
+
+.tc-white {
+  color: #fffffe !important;
+}
+
+.tc-l-grey {
+  color: #bcbcbf !important;
+}
+
+.tc-m-grey {
+  color: #818396 !important;
 }
 
 .book-max-h {
